@@ -2,17 +2,19 @@ package com.example.springTwo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller  // Changed from @RestController to serve HTML views
+@Controller
 public class HomeController {
 
-    // Serve the login page
+    // Map root URL to login page
     @GetMapping("/")
     public String home() {
         return "redirect:/login";
     }
 
-    
+    // Explicit login page mapping
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
 }
