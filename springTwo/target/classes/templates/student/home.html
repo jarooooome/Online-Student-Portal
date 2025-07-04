@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        body {
+            justify-content: flex-start;
+            padding: 40px;
+        }
+
+        .dashboard {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .info {
+            margin-bottom: 1.5rem;
+            font-size: 16px;
+            color: #333;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 1rem;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a.button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="dashboard">
+    <h2>Welcome Student</h2>
+    <p class="info">Logged in as: <strong th:text="${username}">student</strong></p>
+
+    <p>This is your home dashboard where you can view your profile, grades, subjects, and more.</p>
+
+    <a href="/perform_logout" class="button">Logout</a>
+</div>
+</body>
+</html>
