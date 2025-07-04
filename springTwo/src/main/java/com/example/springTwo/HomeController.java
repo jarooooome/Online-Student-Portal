@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    @GetMapping("/login")
+    @GetMapping("/index")
     public String showLoginPage() {
-        // Make sure this matches your actual template filename
-        // Without the .html extension
-        return "login";
+
+        return "index";
     }
 }
